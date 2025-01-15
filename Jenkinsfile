@@ -18,11 +18,11 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 checkout([$class: 'GitSCM', 
-                          branches: [[name: "${params.MOBILE_APP_BACKEND_BRANCH}"]],
+                          branches: [[name: "${params.Branch}"]],
                           doGenerateSubmoduleConfigurations: false,
                           extensions: [],
                           submoduleCfg: [],
-                          userRemoteConfigs: [[url: 'https://your-repository-url.git']]
+                          userRemoteConfigs: [[url: 'https://github.com/prathameshgawade16/test_jenkins']]
                 ])
             }
         }
